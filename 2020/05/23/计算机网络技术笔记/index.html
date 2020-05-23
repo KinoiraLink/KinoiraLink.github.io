@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>计算机网络技术笔记 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="计算机网络技术第一章 概述重要内容 互联网边缘部分和核心部分的作用，分组交换的概念 计算机网络的性能指标* 计算机网络体系结构*  1.1计算机网络在信息时代中的作用三大类网络：电信、有线电视、计算机 互联网两个重要特征：连通性和共享性 1.2互联网概述计算机网络的构成：结点和链路 结点：计算机、集线器、交换机、路由器 网络把许多计算机连接在一起，而互联网则把许多网络通过路由器连接在一起。与网络相">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络技术笔记">
+<meta property="og:url" content="http://yoursite.com/2020/05/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="计算机网络技术第一章 概述重要内容 互联网边缘部分和核心部分的作用，分组交换的概念 计算机网络的性能指标* 计算机网络体系结构*  1.1计算机网络在信息时代中的作用三大类网络：电信、有线电视、计算机 互联网两个重要特征：连通性和共享性 1.2互联网概述计算机网络的构成：结点和链路 结点：计算机、集线器、交换机、路由器 网络把许多计算机连接在一起，而互联网则把许多网络通过路由器连接在一起。与网络相">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513181701566.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513182257584.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513182545335.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513182649609.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513183158994.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513183244132.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513183526480.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513184653796.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513184728593.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513184914377.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513184941702.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513185121375.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513185133909.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513185504692.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513185553921.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513190314747.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513191442646.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513191510456.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191128164313811.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzA5MzQ4MQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513192335872.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513192710769.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513193247183.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513193850661.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513194244408.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513203445465.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513204559356.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513204618943.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513204736717.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513205045482.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513205103653.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513205401397.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513205654741.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513210023144.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513210319473.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513210913537.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191128165139308.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzA5MzQ4MQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513212615156.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513214408496.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513214443901.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513215517657.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513220108298.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/350840/201811/350840-20181115093017301-618187360.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/350840/201811/350840-20181115092958804-1621118286.png">
+<meta property="og:image" content="https://img2018.cnblogs.com/blog/350840/201811/350840-20181115103814287-1836492063.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513221335327.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513222518422.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223306099.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223325037.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223426347.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223509384.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223920677.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513231729644.png">
+<meta property="og:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513231804040.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190510221611957.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3h5aXN2,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-05-23T08:00:38.754Z">
+<meta property="article:modified_time" content="2020-05-14T01:55:49.141Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513181701566.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-计算机网络技术笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-05-23T08:00:38.754Z" itemprop="datePublished">2020-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      计算机网络技术笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="计算机网络技术"><a href="#计算机网络技术" class="headerlink" title="计算机网络技术"></a>计算机网络技术</h1><h2 id="第一章-概述"><a href="#第一章-概述" class="headerlink" title="第一章 概述"></a>第一章 概述</h2><h3 id="重要内容"><a href="#重要内容" class="headerlink" title="重要内容"></a>重要内容</h3><ol>
+<li>互联网边缘部分和核心部分的作用，分组交换的概念</li>
+<li>计算机网络的性能指标*</li>
+<li>计算机网络体系结构*</li>
+</ol>
+<h3 id="1-1计算机网络在信息时代中的作用"><a href="#1-1计算机网络在信息时代中的作用" class="headerlink" title="1.1计算机网络在信息时代中的作用"></a>1.1计算机网络在信息时代中的作用</h3><p>三大类网络：电信、有线电视、计算机</p>
+<p>互联网两个重要特征：连通性和共享性</p>
+<h3 id="1-2互联网概述"><a href="#1-2互联网概述" class="headerlink" title="1.2互联网概述"></a>1.2互联网概述</h3><p>计算机网络的构成：结点和链路</p>
+<p>结点：计算机、集线器、交换机、路由器</p>
+<p>网络把许多计算机连接在一起，而互联网则把许多网络通过路由器连接在一起。与网络相连的计算机常称为主机</p>
+<p>互联网基础结构发展的三个阶段NSFNT：ARPANET（五角大楼）-———&gt;三级结构的互联网（主干网、地区网、校园网或企业网）（NSF）————-&gt;多层次ISP结构的互联网（NSFNET）</p>
+<p>互联网使用三层ISP结构。</p>
+<p>ISP———互联网服务提供商</p>
+<p>IXP———互联网交互点</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513181701566.png" alt="image-20200513181701566"></p>
+<p>WWW（world wide wed）———万维网（欧洲原子核研究组织CERN）</p>
+<p>互联网标准化工作</p>
+<ol>
+<li>互联网工程部IETF</li>
+<li>互联网研究部IRTF</li>
+</ol>
+<p>RFC文件———互联网标准文件</p>
+<p>正式标准的三个阶段：</p>
+<ol>
+<li>互联网草案——不是RFC文件</li>
+<li>建议标准——是RFC文件</li>
+<li>互联网标准</li>
+</ol>
+<h3 id="1-3互联网的组成"><a href="#1-3互联网的组成" class="headerlink" title="1.3互联网的组成"></a>1.3互联网的组成</h3><p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513182257584.png" alt="image-20200513182257584"></p>
+<p>主机（端系统）</p>
+<p>主机间的通信：客户-服务器方式（C/S）和对等方式（P2P）</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513182545335.png" alt="image-20200513182545335"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513182649609.png" alt="image-20200513182649609"></p>
+<p>互联网的核心部分</p>
+<ol>
+<li>电路交换：建立连接——&gt;通话——&gt;释放连接（通话两端始终占用通信资源）</li>
+<li>分组交换：报文、包、协议、时延、结点、链路——互联网采用存储转发的分组交换技术</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513183158994.png" alt="image-20200513183158994"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513183244132.png" alt="image-20200513183244132"></p>
+<ol start="3">
+<li>报文交换</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513183526480.png" alt="image-20200513183526480"></p>
+<h3 id="1-4-计算机在我国的发展"><a href="#1-4-计算机在我国的发展" class="headerlink" title="1.4 计算机在我国的发展"></a>1.4 计算机在我国的发展</h3><p>略</p>
+<h3 id="计算机网络的类别"><a href="#计算机网络的类别" class="headerlink" title="计算机网络的类别"></a>计算机网络的类别</h3><p>计算机网络的定义：略</p>
+<ol>
+<li>按照网咯的作用范围：<ol>
+<li>广域网WAN：</li>
+<li>城域网MAN：范围一个城市5~50km</li>
+<li>局域网LAN：1km以内；校园网、企业网</li>
+<li>个人区域网PAN：略</li>
+</ol>
+</li>
+<li>按照使用者：<ol>
+<li>公用网</li>
+<li>专业我</li>
+</ol>
+</li>
+</ol>
+<h3 id="1-6计算机网络性能指标（七个）"><a href="#1-6计算机网络性能指标（七个）" class="headerlink" title="1.6计算机网络性能指标（七个）"></a>1.6计算机网络性能指标（七个）</h3><ol>
+<li><p>速率： 单位：bit/s（比特每秒）</p>
+</li>
+<li><p>宽带 ： 单位：hz </p>
+</li>
+<li><p>吞吐量：单位时间内通过某个网络（信道、接口）实际的数据量 单位 Gbit/s</p>
+</li>
+<li><p>时延</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513184653796.png" alt="image-20200513184653796"></p>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513184728593.png" alt="image-20200513184728593"></p>
+<p><u><strong><em>关于时延的计算本次不考</em></strong></u></p>
+<ol start="5">
+<li>时延带宽积 ：单位：bit</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513184914377.png" alt="image-20200513184914377"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513184941702.png" alt="image-20200513184941702"></p>
+<ol start="7">
+<li>利用率：利用率太高或太低都不好要适中</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513185121375.png" alt="image-20200513185121375"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513185133909.png" alt="image-20200513185133909"></p>
+<p>计算机网络的非性能特征</p>
+<p>略</p>
+<h3 id="1-7计算机网络体系结构（-重要）"><a href="#1-7计算机网络体系结构（-重要）" class="headerlink" title="1.7计算机网络体系结构（*重要）"></a>1.7计算机网络体系结构（*重要）</h3><ol>
+<li>OSI 七层协议（规定上）</li>
+<li>TCP/IP 四层协议（实际上）</li>
+<li>五层协议（教才使用）</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513185504692.png" alt="image-20200513185504692"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513185553921.png" alt="image-20200513185553921"></p>
+<p>记法：最上层都为应用层、中间层都是运输车，OSI和五层最下三层下同网络、链路、物理，TCP/IP多特有网际层、网络接口层;OSI向上补表示层和会话层。</p>
+<ol>
+<li><p>应用层：数据单元：报文。含DNS、HTTP、SMTP。</p>
+</li>
+<li><p>运输船：<img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513190314747.png" alt="image-20200513190314747"></p>
+</li>
+<li><p>网络层：数据单元：IP数据报；含IP协议</p>
+</li>
+<li><p>数据链路层：帧 IP数据报封装成帧 含控制信息（同步信息、地址信息、差错控制）</p>
+</li>
+<li><p>物理层 传输比特</p>
+</li>
+</ol>
+<p>实体、协议、服务、和服务访问点</p>
+<p>协议  实体之间    水平的PDU</p>
+<p>服务 层层之间    垂直的SDU</p>
+<p>服务访问点SAP 逻辑接口</p>
+<p>TCP/IP的体系结构</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513191442646.png" alt="image-20200513191442646"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513191510456.png" alt="image-20200513191510456"></p>
+<h3 id="重点内容-（补充）"><a href="#重点内容-（补充）" class="headerlink" title="重点内容*（补充）"></a>重点内容*（补充）</h3><p>边缘部分</p>
+<p>端系统：主机</p>
+<p>计算机之间的通信：主机A上的进程与主机B上的进程进行通信</p>
+<p>端系统间通信方式：</p>
+<ul>
+<li><p>1.客户-服务器方式：</p>
+<p>   概述：是最常用与传统的方式，一方请求服务，一方提供服务，通信可以是单向的，也可以是双向的</p>
+<p>   客户和服务器：指通信中涉及的两个应用进程</p>
+<p>   主要特征：客户是服务请求方，服务器是服务提供方</p>
+<pre><code>主要特点：</code></pre><p> 客户程序：</p>
+<pre><code>(1)用户调用后，在通信时主动向远地服务器发起通信(请求服务)。因此，客户程序必须知道服务器程序的地址
+
+(2)不需要特殊的硬件和很复杂的操作系统</code></pre><p>  服务器程序：</p>
+<pre><code>(1)是一种专门提供服务的程序，可同时处理多个客户的请求
+
+(2)系统启动后即自动调用不断运行，被动等待接受客户的通信请求。因此，服务器程序不需要知道客户程序的地址
+
+(3)一般需要强大的硬件和操作系统支持</code></pre></li>
+</ul>
+<ul>
+<li>2.对等连接方式(P2P)：</li>
+</ul>
+<p>​     概述：两台主机不区分服务器和客户，只要都运行p2p软件，就可以进行平等对等连接通信，双方都可访问对方硬盘中的共享文档。可支持大量对等用户同时工作</p>
+<p>核心部分</p>
+<p>路由器的重要性：路由器是一种专用计算机，是实现分组交换的关键部件，其任务是转发收到的分组，这是网络核心部分最重要的功能</p>
+<p>交换：按照某种方式动态分配传输线路的资源</p>
+<p>三种交换方式：</p>
+<pre><code>(1)电路交换：
+
+    工作方式：在两用户端间建立一条专用的物理通路，保证了双方通信所需的通信资源，而这些资源在双方通信时也不会被其他用户占用
+
+    三个步骤：建立连接(占用通信资源)-&gt;通话(一直占用通信资源)-&gt;释放连接(归还通信资源)
+
+    重要特点：在通话的全部时间内，通话的两个用户始终占用端到端的通信资源
+
+(2)报文交换：
+
+    特点：整个报文先传送到相邻结点，全部存储下来后查找转发表，转发给下一个结点</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">(3)分组交换：</span><br><span class="line">工作方式：采用存储转发技术，把一个报文划分为几个分组后进行传送</span><br><span class="line"></span><br><span class="line">报文：要发送的整块数据</span><br><span class="line"></span><br><span class="line">分组：把较长的报文分成更小的等长数据段，再加上必要的控制信息组成的首部后，就构成一个分组；分组又称包，分组的首部又称包头</span><br><span class="line"></span><br><span class="line">首部的重要性：包含了诸如目的地址和源地址等重要控制信息，使每一个分组才能独立的选择传输路径，并正确交付到终点</span><br><span class="line"></span><br><span class="line">存储转发技术：路由器收到分组后，先暂时存储，检查其首部，查找转发表，按照首部中目的地址，选择合适的接口转发出去</span><br><span class="line"></span><br><span class="line">优点：</span><br><span class="line"></span><br><span class="line">    高效：在分组传输过程动态分配传输带宽，对通信链路逐段占用</span><br><span class="line"></span><br><span class="line">    灵活：为每个分组独立选择最合适的转发路由</span><br><span class="line"></span><br><span class="line">    迅速：以分组为单位传输，不用建立和释放连接</span><br><span class="line"></span><br><span class="line">    可靠：保证可靠性的网络协议；分布式多路由器的分组交换网，有很好的生存性</span><br></pre></td></tr></table></figure>
+
+
+<p>三种交换的特点概述：</p>
+<pre><code>(1)电路交换：整个报文的比特流连续的从源点直达终点，好像在管道中传送
+
+(2)报文交换：整个报文先传送到相邻结点，全部存储下来后查找转发表，转发给下一个结点
+
+(3)分组交换：单个分组传送到相邻结点，存储下来后查找转发表，转发给下一个结点</code></pre><p><strong>实体、协议、服务、服务访问点</strong></p>
+<p> 实体：表示任何可发送或接受信息的硬件或软件进程；很多情况下，实体就是一个特点的软件模块</p>
+<p>协议：控制两个或多个对等实体进行通信的规则的集合</p>
+<p>服务：由下层向上层通过层间接口提供的功能</p>
+<p>服务访问点：在同一系统相邻两层的时间进行交互的地方</p>
+<p>协议与服务：在协议的控制下，两个对等实体间的通信使得本层能够向上一层提供服务。要实现本层协议，还需要使用下面层提供的服务；</p>
+<pre><code>协议是&quot;水平的&quot;，即协议是控制对等实体间通信的规则，服务是&quot;垂直的&quot;，即服务是由下层向上层通过接口提供的</code></pre><h2 id="第二章-物理层"><a href="#第二章-物理层" class="headerlink" title="第二章 物理层"></a>第二章 物理层</h2><p><img src="https://img-blog.csdnimg.cn/20191128164313811.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzA5MzQ4MQ==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<h3 id="重要内容-1"><a href="#重要内容-1" class="headerlink" title="重要内容"></a>重要内容</h3><ol>
+<li>物理层任务</li>
+<li>几种信道复用技术</li>
+<li>几种宽带接入技术</li>
+</ol>
+<h3 id="2-1物理层的基本概念"><a href="#2-1物理层的基本概念" class="headerlink" title="2.1物理层的基本概念"></a>2.1物理层的基本概念</h3><p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513192335872.png" alt="image-20200513192335872"></p>
+<p>数据在通信线路上的传输方式一般是<u><em>串行传输</em></u></p>
+<h3 id="2-2数据通信的基础知识"><a href="#2-2数据通信的基础知识" class="headerlink" title="2.2数据通信的基础知识"></a>2.2数据通信的基础知识</h3><p>数据通信系统：源系统（发送端、发送方）、传输系统（传输网络）、目的系统（接收端、接收方）</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513192710769.png" alt="image-20200513192710769"></p>
+<p>信号的两大类：</p>
+<ol>
+<li>模拟信号，连续信号：调制解调器到电话端</li>
+<li>数字信号，离散信号：调制解调器到计算机</li>
+</ol>
+<p>0，1是码元的两种不同状态</p>
+<p>信道的基本概念：</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513193247183.png" alt="image-20200513193247183"></p>
+<p>单工通信：广播</p>
+<p>半双工通信：email</p>
+<p>全双工通信：qq</p>
+<p>基带信号：来自信源的信号，即计算机输出的文字图片；</p>
+<p>要对基带信号进行调制</p>
+<p>调制：</p>
+<ol>
+<li>编码 基带调制    波形变化</li>
+<li>带通信号 带通调制    载波调制</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513193850661.png" alt="image-20200513193850661"></p>
+<p>曼特斯特编码：前凸后凹为1；</p>
+<p>差分曼特斯特编码：跟前一位相比，*<u><strong>跳变</strong></u>*为1</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513194244408.png" alt="image-20200513194244408"></p>
+<p>带通调制方法：调频、调幅、调相</p>
+<p>信道的极限容量</p>
+<ol>
+<li><p>信道能够通过的频率范围——奈氏准则，在任何信道中，码元传输的速率是有上限的，传输速率超过此上限，就会出现严重的码间串扰的问题，使接收端的判决成为不可能。</p>
+</li>
+<li><p>信噪比——香农公式</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513203445465.png" alt="image-20200513203445465"></p>
+<p>香农公式表明，信道的宽带或信道中的信噪比越大，信息的极限传输速率就越高。</p>
+</li>
+</ol>
+<h3 id="2-3-物理层下面的传输媒体"><a href="#2-3-物理层下面的传输媒体" class="headerlink" title="2.3 物理层下面的传输媒体"></a>2.3 物理层下面的传输媒体</h3><p>引导型传输媒体：</p>
+<p>1.双绞线：两根互相绝缘的铜导线并排用规则绞合成。绞合可减少对相邻导线的电磁干扰。</p>
+<p>屏蔽双绞线：STP</p>
+<p>无屏蔽双绞线：UTP</p>
+<p>长距离通信信号衰减通过放大器放大信号（模拟传输）和中继器对失真信号进行整形（数字传输）</p>
+<p>常用UTP5类线。使用粗的导线可以降低衰减</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513204559356.png" alt="image-20200513204559356"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513204618943.png" alt="image-20200513204618943"></p>
+<ol start="2">
+<li>同轴电缆</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513204736717.png" alt="image-20200513204736717"></p>
+<ol start="3">
+<li>光缆 </li>
+</ol>
+<p>光纤通信就是利用光导纤维传递光脉冲来传递信号的。有光脉冲为1，反之为0。</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513205045482.png" alt="image-20200513205045482"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513205103653.png" alt="image-20200513205103653"></p>
+<p>光纤：</p>
+<ol>
+<li>多模光纤：容易失真，只适合近距离传输。</li>
+<li>单模光纤：成本高</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513205401397.png" alt="image-20200513205401397"></p>
+<p>非导引型传输媒体——主要为无线电</p>
+<p>略</p>
+<h3 id="2-4信道复用技术"><a href="#2-4信道复用技术" class="headerlink" title="2.4信道复用技术"></a>2.4信道复用技术</h3><p>复用：</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513205654741.png" alt="image-20200513205654741"></p>
+<p>最常用的复用：</p>
+<ol>
+<li>频分复用FDM：所有用户在同样的时间占用不同的宽带资源</li>
+<li>时分复用TDM：所有用户在不同的时间占用同样的频带宽度</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513210023144.png" alt="image-20200513210023144"></p>
+<p>通信时，复用器和分用器成对使用。</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513210319473.png" alt="image-20200513210319473"></p>
+<p>统计复用又可以称为：异步时分复用</p>
+<p>普通复用又可以称为：同步时分复用</p>
+<p>TDM帧和STDM帧和链路层的帧不是同一个概念</p>
+<ol start="3">
+<li>波分复用WDM——光的频分复用</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513210913537.png" alt="image-20200513210913537"></p>
+<ol start="4">
+<li>码分复用CD——有很强的抗干扰能力</li>
+</ol>
+<h3 id="2-5数字传输系统"><a href="#2-5数字传输系统" class="headerlink" title="2.5数字传输系统"></a>2.5数字传输系统</h3><p>早期数字传输系统的缺点：</p>
+<ol>
+<li>速率标准不统一</li>
+<li>不是同步传输</li>
+</ol>
+<p>第一个数字传输标准1988年美工的 同步光纤网SONET</p>
+<p>ITU-T                                                    同步数字系列SDH                                                               </p>
+<h3 id="2-6-宽带接入技术"><a href="#2-6-宽带接入技术" class="headerlink" title="2.6 宽带接入技术"></a>2.6 宽带接入技术</h3><p>有线宽带技术：</p>
+<ol>
+<li>ADSL技术：非对称</li>
+<li>光纤同轴混合网（HFC网）</li>
+<li>FTTx技术</li>
+</ol>
+<h2 id="第三章-数据链路层"><a href="#第三章-数据链路层" class="headerlink" title="第三章 数据链路层"></a>第三章 数据链路层</h2><p><img src="https://img-blog.csdnimg.cn/20191128165139308.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzA5MzQ4MQ==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p>数据链路层使用的信道的类型：</p>
+<ol>
+<li>点对点信道：一对一的点对点通信方式。</li>
+<li>广播信道：一对多的广播通信方式</li>
+</ol>
+<h3 id="重要内容-2"><a href="#重要内容-2" class="headerlink" title="重要内容"></a>重要内容</h3><ol>
+<li>数据链入层的点对点信道和广播信道的特点，以及这两种信道所使用的协议（PPP协议和CSMA/CD协议）的特点。</li>
+<li>数据链路层的三个基本问题：封装成帧、透明传输和差错检测。</li>
+<li>以太网MAC层的硬件地址。</li>
+<li>适配器、转发器、集线器、网桥、以太网交换机的作用以及使用场合。</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513212615156.png" alt="image-20200513212615156"></p>
+<h3 id="3-1使用点对点信道的数据链入层"><a href="#3-1使用点对点信道的数据链入层" class="headerlink" title="3.1使用点对点信道的数据链入层"></a>3.1使用点对点信道的数据链入层</h3><p>链路：</p>
+<p>物理链路：物理层面上的数据链路</p>
+<p>逻辑链路：上面数据链路上加了必要的通信协议</p>
+<p>帧——点对点信道的数据链路层的协议数据单元</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513214408496.png" alt="image-20200513214408496"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513214443901.png" alt="image-20200513214443901"></p>
+<p><u><strong><em>三个基本（超级重要）</em></strong></u>：封装成帧、透明传输、差错检测</p>
+<ol>
+<li><p>封装成帧</p>
+<p>在一段数据前后添加首部和尾部，用来识别数据比特流的开始和结束</p>
+<p>链路层协议规定了传送的帧的数据部分长度上限——最大传送单元MTU</p>
+<p>对于ASCII码组成的文本文件，帧定界可以使用特殊的帧定界符SOH和EOT</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513215517657.png" alt="image-20200513215517657"></p>
+</li>
+<li><p>透明传输</p>
+<p>对于非ASCII码文本文件，为防止错误的帧边界，要进行字节填充或字符填充</p>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513220108298.png" alt="image-20200513220108298"></p>
+<ol start="3">
+<li><p>差错检测 循环冗余检验CRC</p>
+</li>
+<li><p>CRC校验原理<br>   CRC校验原理看起来比较复杂，好难懂，因为大多数书上基本上是以二进制的多项式形式来说明的。其实很简单的问题，其根本思想就是先在要发送的帧后面附加一个数（这个就是用来校验的校验码，但要注意，这里的数也是二进制序列的，下同），生成一个新帧发送给接收端。当然，这个附加的数不是随意的，它要使所生成的新帧能与发送端和接收端共同选定的某个特定数整除（注意，这里不是直接采用二进制除法，而是采用一种称之为“模2除法”）。到达接收端后，再把接收到的新帧除以（同样采用“模2除法”）这个选定的除数。因为在发送端发送数据帧之前就已通过附加一个数，做了“去余”处理（也就已经能整除了），所以结果应该是没有余数。如果有余数，则表明该帧在传输过程中出现了差错。</p>
+<p>【说明】“模2除法”与“算术除法”类似，但它既不向上位借位，也不比较除数和被除数的相同位数值的大小，只要以相同位数进行相除即可。模2加法运算为：1+1=0，0+1=1，0+0=0，无进位，也无借位；模2减法运算为：1-1=0，0-1=1，1-0=1，0-0=0，也无进位，无借位。相当于二进制中的<strong><u><em>逻辑异或运算</em></u></strong>。也就是比较后，<u><strong><em>两者对应位相同则结果为“0”，不同则结果为“1”。</em></strong></u>如100101除以1110，结果得到商为11，余数为1，如图5-9左图所示。如11×11=101，如图5-9右图所示。</p>
+<p><img src="https://img2018.cnblogs.com/blog/350840/201811/350840-20181115093017301-618187360.png" alt="img">)<img src="https://img2018.cnblogs.com/blog/350840/201811/350840-20181115092958804-1621118286.png" alt="img"></p>
+<p>　　　　　　　　　图5-9 “模2除法”和“模2乘法”示例</p>
+<p>具体来说，CRC校验原理就是以下几个步骤：</p>
+<p>（1）先选择（可以随机选择，也可按标准选择，具体在后面介绍）一个用于在接收端进行校验时，对接收的帧进行除法运算的除数（是二进制比较特串，通常是以多项方式表示，所以CRC又称多项式编码方法，这个多项式也称之为“生成多项式”）。</p>
+<p>（2）看所选定的除数二进制位数（假设为k位），然后在要发送的数据帧（假设为m位）后面加上k-1位“0”，然后以这个加了k-1个“0“的新帧（一共是m+k-1位）以“模2除法”方式除以上面这个除数，所得到的余数（也是二进制的比特串）就是该帧的CRC校验码，也称之为FCS（帧校验序列）。但要注意的是，<strong>余数的位数一定要是比除数位数只能少一位，哪怕前面位是0，甚至是全为0（附带好整除时）也都不能省略</strong>。</p>
+<p>（3）再把这个校验码附加在原数据帧（就是m位的帧，注意不是在后面形成的m+k-1位的帧）后面，构建一个新帧发送到接收端，最后在接收端再把这个新帧以“模2除法”方式除以前面选择的除数，如果没有余数，则表明该帧在传输过程中没出错，否则出现了差错。</p>
+<p>通过以上介绍，大家一定可以理解CRC校验的原理，并且不再认为很复杂吧。</p>
+<p>从上面可以看出，CRC校验中有两个关键点：一是要预先确定一个发送端和接收端都用来作为除数的二进制比特串（或多项式）；二是把原始帧与上面选定的除进行二进制除法运算，计算出FCS。前者可以随机选择，也可按国际上通行的标准选择，但最高位和最低位必须均为“1”，如在IBM的SDLC（同步数据链路控制）规程中使用的CRC-16（也就是这个除数一共是17位）生成多项式g（x）= x16 + x15 + x2 +1（对应二进制比特串为：11000000000000101）；而在ISO HDLC（高级数据链路控制）规程、ITU的SDLC、X.25、V.34、V.41、V.42等中使用CCITT-16生成多项式g（x）=x16 + x15 + x5 +1（对应二进制比特串为：11000000000100001）。</p>
+<ol start="2">
+<li>CRC校验码的计算示例<br>由以上分析可知，既然除数是随机，或者按标准选定的，所以CRC校验的关键是如何求出余数，也就是CRC校验码。</li>
+</ol>
+<p>下面以一个例子来具体说明整个过程。现假设选择的CRC生成多项式为G（X） = X4 + X3 + 1，要求出二进制序列10110011的CRC校验码。下面是具体的计算过程：</p>
+<p>（1）首先把生成多项式转换成二进制数，由G（X） = X4 + X3 + 1可以知道（，它一共是5位（总位数等于最高位的幂次加1，即4+1=5），然后根据多项式各项的含义（多项式只列出二进制值为1的位，也就是这个二进制的第4位、第3位、第0位的二进制均为1，其它位均为0）很快就可得到它的二进制比特串为11001。</p>
+<p>（2）因为生成多项式的位数为5，根据前面的介绍，得知CRC校验码的位数为4（校验码的位数比生成多项式的位数少1）。因为原数据帧10110011，在它后面再加4个0，得到101100110000，然后把这个数以“模2除法”方式除以生成多项式，得到的余数，即CRC校验码为0100，如图5-10所示。注意参考前面介绍的“模2除法”运算法则。</p>
+<p><img src="https://img2018.cnblogs.com/blog/350840/201811/350840-20181115103814287-1836492063.png" alt="img"></p>
+</li>
+</ol>
+<p>​                   图5-10 CRC校验码计算示例</p>
+<p>  （3）把上步计算得到的CRC校验码0100替换原始帧101100110000后面的四个“0”，得到新帧101100110100。再把这个新帧发送到接收端。</p>
+<p>  （4）当以上新帧到达接收端后，接收端会把这个新帧再用上面选定的除数11001以“模2除法”方式去除，验证余数是否为0，如果为0，则证明该帧数据在传输过程中没有出现差错，否则出现了差错。</p>
+<h3 id="3-2点对点协议PPP"><a href="#3-2点对点协议PPP" class="headerlink" title="3.2点对点协议PPP"></a>3.2点对点协议PPP</h3><p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513221335327.png" alt="image-20200513221335327"></p>
+<p>1.PPP协议应满足的需求</p>
+<ol>
+<li>​    简单                首要需求</li>
+<li>封装成帧        规定帧定界符</li>
+<li>透明性            （见3.2.2节）（重要）</li>
+<li>多网络层协议 在同一条物理链路上同时支持多种网络层协议（IP、IPX等）</li>
+<li>多种类型链路</li>
+</ol>
+<p>PPPoE协议：PPP在以太网运行的PPP协议的一种，让用户可以利用ADSL进行宽带上网</p>
+<ol start="6">
+<li><p>差错检测 </p>
+</li>
+<li><p>检测连接状态</p>
+</li>
+<li><p>最大传送单元</p>
+</li>
+<li><p>网络层地址协商</p>
+</li>
+<li><p>数据压缩协商</p>
+</li>
+<li><p>PPP协议的组成：</p>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513222518422.png" alt="image-20200513222518422"></p>
+<p>一个方法（封装成帧）两个协议（LCP和NCP）</p>
+<p>PPP协议的帧格式</p>
+<ol>
+<li><p>各字段的意义</p>
+<p>ppp帧的首部四个字段，尾部两个字段</p>
+<p>首尾都有标志字段F（Flag）为0x7E（16进制）（01111110）（2进制）表示帧定开始结束、为PPP帧的定界符，连续出现两个标志字段，表示空帧，丢弃。</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223306099.png" alt="image-20200513223306099"></p>
+</li>
+</ol>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223325037.png" alt="image-20200513223325037"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223426347.png" alt="image-20200513223426347"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223509384.png" alt="image-20200513223509384"></p>
+<p>连续5个1，立即填入1个0</p>
+<p>PPP协议的工作状态</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513223920677.png" alt="image-20200513223920677"></p>
+<h3 id="3-3-使用广播信道的数据链路层"><a href="#3-3-使用广播信道的数据链路层" class="headerlink" title="3.3 使用广播信道的数据链路层"></a>3.3 使用广播信道的数据链路层</h3><ol>
+<li><p>以太网的两个标准： DIX Ethernet V2</p>
+<p>​                                    IEEE 802.3</p>
+</li>
+<li><p>适配器（网络接口卡、网卡）的作用：进行数据串行传输和并行传输的转换。</p>
+</li>
+</ol>
+<p>CSMA/CD协议（载波监听多点接入/碰撞检测）（重要*）（半双工通信）</p>
+<p>​    多点接入：多台计算机连接在一根总线上</p>
+<p>​    载波监听：不停检测信道</p>
+<p>​    碰撞检测：边发送边监听</p>
+<p>​    以太网发送数据使用曼特斯特编码</p>
+<p>使用集线器的星形拓扑（集线器的作用详见3.4）扩展以太网</p>
+<p>以太网的信道利用率</p>
+<p>略</p>
+<ol>
+<li><p>mac地址</p>
+<p>物理地址（硬件地址）48位 固化在适配器的ROM中</p>
+</li>
+<li><p>MAC帧的格式</p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513231729644.png" alt="image-20200513231729644"></p>
+<p><img src="C:%5CUsers%5CKinoiraLink%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200513231804040.png" alt="image-20200513231804040"></p>
+</li>
+</ol>
+<h3 id="3-4扩展的以太网"><a href="#3-4扩展的以太网" class="headerlink" title="3.4扩展的以太网"></a>3.4扩展的以太网</h3><ol>
+<li>在物理层扩展以太网——集线器</li>
+<li>在数据链路层扩展以太网——网桥、交换器（自学习功能）</li>
+<li>虚拟局域网VLAN——通过VLAN标识符VID标识</li>
+</ol>
+<p>网桥：对收到的帧根据MAC帧目的地址查找地址表进行转发和过滤</p>
+<p>交换机：工作在数据链路层，实质就是一个多接口网桥</p>
+<pre><code>*特点：交换机上的主机是全双工工作，不会产生冲突，交换机中存有地址表通过自学习算法建立，交换机上所有端口在同一个广播域上</code></pre><p>帧转发方式：</p>
+<pre><code>直通：收到帧之后直接转发，不必事先把整个数据帧缓存，但也不对帧进行检验
+
+存储转发：将所有帧都收到后进行检查，然后再发送</code></pre><p>*交换机的自学习功能：</p>
+<pre><code>地址表的形成：收到未知的地址后，存储源地址和接口的对应关系，向除来源端口的其它端口广播，目的地址不符则丢弃，否则接收并回复，收到回复后存储对应关系；地址表有有效时间，超过有效时间则失效</code></pre><p>生成树协议STP：解决无限循环的问题</p>
+<p>虚拟局域网（VLAN）：是一些局域网网段构成的与物理位置无关的逻辑组</p>
+<p>VLAN标记：在MAC帧的源地址和类型间插入4字节的VLAN标记，交换机收到帧后只向所属VLAN转发，而不进行广播</p>
+<p>最大帧长变为1522字节(1518+4)</p>
+<h3 id="3-5高速以太网"><a href="#3-5高速以太网" class="headerlink" title="3.5高速以太网"></a>3.5高速以太网</h3><ol>
+<li>100BASE-T以太网</li>
+<li>吉比特以太网</li>
+<li>10吉比特以太网和更快的以太网</li>
+</ol>
+<h3 id="难点总结"><a href="#难点总结" class="headerlink" title="难点总结"></a>难点总结</h3><p><u><strong><em>碰撞域（冲突域）和广播域区别</em></strong></u></p>
+<p>在说到碰撞域（冲突域）和广播域之前，首先要介绍一下三个网络互连设备——集线器、交换机和路由器。</p>
+<p>集线器<br>集线器是工作在物理层的设备，当他收到数据以后就把这个数据复制复制以后就把这个数据象所有的接口发送一次。所以集线器所有的接口是一个冲突域和广播域。</p>
+<p>交换机<br>交换机就和集线器不一样了，交换机工作数据链路层的设备，他能够识别数据帧和MAC地址，他工作的方式就和集线器有很大的区别。交换机是依靠MAC地址表来转发数据。对于MAC地址表里没有的数据就广播。所以我们说交换机的每个接口都是一个冲突域，交换机的所有的接口都属于一个广播域。</p>
+<p>路由器<br>路由器是工作在网络层的设备，路由器转发数据是依靠路由表来转发数据。对于广播流量路由器会处理但是不会转发数据。所以我们说路由器的每个接口都属于同一个冲突域和广播域。路由器可以用来隔离广播。</p>
+<p>设备总结<br>集线器（HUB）所有端口都在同一个广播域、冲突域内，所以HUB不能分割冲突域和广播域。<br>交换机（Switch）所有端口都在同一个广播域内，而每一个端口就是一个冲突域，所以交换机能分割冲突域，但分割不了广播域。虚拟局域网（Vlan）技术可以隔离广播域。<br>路由器（Router）的每个端口属于不同的广播域、冲突域。<br>也可以这样理解：</p>
+<p>HUB属于第一层设备所以分隔不了冲突域；<br>交换机和网桥属于第二层设备所以能分割冲突域；<br>路由器属于第三层设备，所以既能分割冲突域又能分割广播域。<br>冲突域<br>连接在同一导线上的所有工作站的集合，或者说是同一物理网段上所有节点的集合或以太网上竞争同一带宽的节点集合。这个域代表了冲突在其中发生并传播的区域，这个区域可以被认为是共享段。在OSI模型中，冲突域被看作是第一层的概念，连接同一冲突域的设备有Hub，Reperter或者其他进行简单复制信号的设备。也就是说，用Hub或者Repeater连接的所有节点可以被认为是在同一个冲突域内，它不会划分冲突域。而第二层设备（网桥，交换机）第三层设备（路由器）都可以划分冲突域的，当然也可以连接不同的冲突域。简单的说，可以将Repeater等看成是一根电缆，而将网桥等看成是一束电缆。</p>
+<p>广播域<br>接收同样广播消息的节点的集合。如：在该集合中的任何一个节点传输一个广播帧，则所有其他能收到这个帧的节点都被认为是该广播帧的一部分。由于许多设备都极易产生广播，所以如果不维护，就会消耗大量的带宽，降低网络的效率。由于广播域被认为是OSI中的第二层概念，所以像Hub，交换机等第一，第二层设备连接的节点被认为都是在同一个广播域。而路由器，第三层交换机则可以划分广播域，即可以连接不同的广播域。</p>
+<p>例题</p>
+<p><img src="https://img-blog.csdnimg.cn/20190510221611957.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3h5aXN2,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>参考来源：版权声明：本文为CSDN博主「Ogmx」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/weixin_43093481/java/article/details/86683911" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43093481/java/article/details/86683911</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/" data-id="ckajczbu70002t4vc01ue63md" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的第一篇博文</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/05/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/">计算机网络技术笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E6%96%87/">我的第一篇博文</a>
+          </li>
+        
+          <li>
+            <a href="/2020/05/23/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
